@@ -3,7 +3,7 @@
 Programs for Operating Systems Lab.
 
 ## Setting Up
-Clone the project. \
+Clone the project. 
 
 ### For Setting up a Virtual Environment
 To create a virtual environment, run
