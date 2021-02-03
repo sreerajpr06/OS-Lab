@@ -81,6 +81,8 @@ def executeProcesses():
     global processes, TIME
 
     for process in processes:
+        if TIME < process.arrivalTime:
+            TIME = process.arrivalTime
         TIME += process.burstTime
         process.setCompletionTime(TIME)
         process.setTurnAroundTime()

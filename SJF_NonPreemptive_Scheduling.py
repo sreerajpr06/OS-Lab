@@ -92,6 +92,9 @@ def executeProcesses():
     while len(availableProcesses) > 0:
         curProcess = availableProcesses[0]
         processes.remove(curProcess)
+
+        if TIME < curProcess.arrivalTime:
+            TIME = curProcess.arrivalTime
         TIME += curProcess.burstTime
         curProcess.setCompletionTime(TIME)
         curProcess.setTurnAroundTime()

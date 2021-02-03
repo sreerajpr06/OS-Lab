@@ -92,6 +92,9 @@ def executeProcesses(quantum):
         curProcess = waitingProcesses[0]
         if curProcess in processes:
             processes.remove(curProcess)
+
+        if TIME < curProcess.arrivalTime:
+            TIME = curProcess.arrivalTime
         TIME += (quantum if curProcess.remainingTime >= quantum else curProcess.remainingTime)
         curProcess.updateRemainingTime(quantum)
 
