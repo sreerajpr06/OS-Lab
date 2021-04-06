@@ -7,11 +7,9 @@ fact=1
 
 if [ $n = 0 ]
 then
-	echo aha
 	fact=1
 elif [ $n = 1 ]
 then
-	echo oho
 	fact=1
 else
 	i=2
